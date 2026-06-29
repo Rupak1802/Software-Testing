@@ -26,5 +26,6 @@ public class LoginTestinf {
         driver.findElement(By.id("postal-code")).sendKeys("5645");
         driver.findElement(By.id("continue")).click();
         driver.findElement(By.id("finish")).click();
+        driver.quit();
     }
 }
