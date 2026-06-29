@@ -18,6 +18,13 @@ public class LoginTestinf {
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("inventory"),"login failed");
         System.out.println("login success");
-        driver.quit();
+        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.className("shopping_cart_link")).click();
+        driver.findElement(By.id("checkout")).click();
+        driver.findElement(By.id("first-name")).sendKeys("rupak");
+        driver.findElement(By.id("last-name")).sendKeys("b");
+        driver.findElement(By.id("postal-code")).sendKeys("5645");
+        driver.findElement(By.id("continue")).click();
+        driver.findElement(By.id("finish")).click();
     }
 }
